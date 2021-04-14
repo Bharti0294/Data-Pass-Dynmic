@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <h2>Create Post</h2>
+            <form>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" name="name" required [(ngModel)]="post.name">
+                </div>
+                <div class="form-group">
+                    <label>Title</label><br>
+                    <textarea name="content" class="formcontrol"  style="height: 40px;width: 740px;" required
+                        [(ngModel)]="post.title"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Skill</label><br>
+                    <textarea name="content" class="formcontrol"  style="height: 40px;width: 740px;" required
+                        [(ngModel)]="post.skill"></textarea>
+                </div>
+                <!-- <div class="form-group">
+                    <label>Description</label><br>
+                    <textarea name="content" class="formcontrol"  style="height: 40px;width: 740px;" required
+                        [(ngModel)]="post.description"></textarea>
+                </div> -->
+                <button type="submit" class="btn btn-primary" (click)="onAddPost()">Create</button>
+            </form>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>

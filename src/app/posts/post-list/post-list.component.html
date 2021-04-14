@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+
+            <h3>List</h3>
+            <ng-container *ngIf="posts.length; else elseTemplate">
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let post of posts; let i = index">
+                        <h4>{{i+1}}) {{post.name}}</h4>
+                        <p>
+                            {{post.title}}
+                        </p>
+                        <p>
+                            {{post.skill}}
+                        </p>
+                        <p>
+                            {{post.description}}
+                        </p>
+                    </li>
+                </ul>
+            </ng-container>
+            <ng-template #elseTemplate>
+                <div class="alert alert-danger" role="alert">
+                    No Post Found!
+                </div>
+            </ng-template>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div><br>

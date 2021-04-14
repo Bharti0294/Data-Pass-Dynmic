@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'DataPassingExample';
+  storedPosts = [] as any
+onPostAdded(event: any) {
+this.storedPosts.push(event);
+}
+
 }
